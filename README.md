@@ -1,5 +1,5 @@
 # xy-inc
-Serviço para consulta de CEP na base do correios através do site: http://www.buscacep.correios.com.br. Desenvolvido em C#.
+Serviço para consulta de CEP na base do correios através do site: http://www.buscacep.correios.com.br. Desenvolvido em C#(Sharp).
 
 <h3>
 Para configuração (instruções para execução):
@@ -38,11 +38,11 @@ http://localhost/PaginaConsultaCEP/ConsultarCEP.aspx
 
 <p>Fontes do webservice de consulta no site correios:
 <code>
-https://github.com/phillipeluiz/xy-inc/trunk/BuscaCEP/BuscaCEP
+https://github.com/phillipeluiz/xy-inc/tree/master/BuscaCEP/BuscaCEP
 </code>
 <p>Fontes da página que consome o serviço:
 <code>
-https://github.com/phillipeluiz/xy-inc/trunk/BuscaCEP/PaginaConsultaCEP
+https://github.com/phillipeluiz/xy-inc/tree/master/BuscaCEP/PaginaConsultaCEP
 </code>
 
 
