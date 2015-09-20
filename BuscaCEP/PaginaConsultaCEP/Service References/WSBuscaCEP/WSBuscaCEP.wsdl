@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="endereco_por_CEP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCEP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="endereco_por_CEPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="endereco_por_CEPResult" type="tns:ArrayOfEndereco" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEndereco">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Endereco" nillable="true" type="tns:Endereco" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Endereco">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cep" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="logradouro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CEP_por_Endereco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCidade" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLogradouro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CEP_por_EnderecoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CEP_por_EnderecoResult" type="tns:ArrayOfEndereco" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="endereco_por_CEPSoapIn">
+    <wsdl:part name="parameters" element="tns:endereco_por_CEP" />
+  </wsdl:message>
+  <wsdl:message name="endereco_por_CEPSoapOut">
+    <wsdl:part name="parameters" element="tns:endereco_por_CEPResponse" />
+  </wsdl:message>
+  <wsdl:message name="CEP_por_EnderecoSoapIn">
+    <wsdl:part name="parameters" element="tns:CEP_por_Endereco" />
+  </wsdl:message>
+  <wsdl:message name="CEP_por_EnderecoSoapOut">
+    <wsdl:part name="parameters" element="tns:CEP_por_EnderecoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSBuscaCEPSoap">
+    <wsdl:operation name="endereco_por_CEP">
+      <wsdl:input message="tns:endereco_por_CEPSoapIn" />
+      <wsdl:output message="tns:endereco_por_CEPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CEP_por_Endereco">
+      <wsdl:input message="tns:CEP_por_EnderecoSoapIn" />
+      <wsdl:output message="tns:CEP_por_EnderecoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSBuscaCEPSoap" type="tns:WSBuscaCEPSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="endereco_por_CEP">
+      <soap:operation soapAction="http://tempuri.org/endereco_por_CEP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEP_por_Endereco">
+      <soap:operation soapAction="http://tempuri.org/CEP_por_Endereco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSBuscaCEPSoap12" type="tns:WSBuscaCEPSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="endereco_por_CEP">
+      <soap12:operation soapAction="http://tempuri.org/endereco_por_CEP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CEP_por_Endereco">
+      <soap12:operation soapAction="http://tempuri.org/CEP_por_Endereco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSBuscaCEP">
+    <wsdl:port name="WSBuscaCEPSoap" binding="tns:WSBuscaCEPSoap">
+      <soap:address location="http://localhost/BuscaCEP/WSBuscaCEP.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSBuscaCEPSoap12" binding="tns:WSBuscaCEPSoap12">
+      <soap12:address location="http://localhost/BuscaCEP/WSBuscaCEP.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
