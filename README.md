@@ -34,7 +34,16 @@ http://localhost/PaginaConsultaCEP/ConsultarCEP.aspx
 <code>
 
 
+<h3>Fontes</h3>
 
+<p>Fontes do webservice de consulta no site correios:
+<code>
+https://github.com/phillipeluiz/xy-inc/trunk/BuscaCEP/BuscaCEP
+</code>
+<p>Fontes da página que consome o serviço:
+<code>
+https://github.com/phillipeluiz/xy-inc/trunk/BuscaCEP/PaginaConsultaCEP
+</code>
 
 
 
