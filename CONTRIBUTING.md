@@ -26,7 +26,7 @@ Para configuração (instruções para execução):
 <li>web.config
 </ul>
 
-<h3>Teste</h3>
+<h3>Testes</h3>
 
 Executar a chamada para a página abaixo através de qualquer navegador de internet para realizar os testes:
 <code>
