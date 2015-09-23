@@ -1,4 +1,4 @@
-# xy-inc
+﻿# xy-inc
 Serviço para consulta de CEP na base do correios através do site: http://www.buscacep.correios.com.br. Desenvolvido em C#(Sharp).
 
 <h3>
@@ -26,7 +26,7 @@ Para configuração (instruções para execução):
 <li>web.config
 </ul>
 
-<h3>Testes</h3>
+<h3>Teste</h3>
 
 Executar a chamada para a página abaixo através de qualquer navegador de internet para realizar os testes:
 <code>
