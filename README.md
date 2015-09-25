@@ -45,7 +45,6 @@ https://github.com/phillipeluiz/xy-inc/tree/master/BuscaCEP/BuscaCEP
 https://github.com/phillipeluiz/xy-inc/tree/master/BuscaCEP/PaginaConsultaCEP
 </code>
 
-<p> teste de push no git via codigo</p>
 
 
 
